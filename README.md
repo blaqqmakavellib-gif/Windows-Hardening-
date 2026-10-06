@@ -16,6 +16,9 @@ The lab was executed across five core phases to establish a zero-trust administr
 *   **Phase 3: Security Audit & Testing**
     *   Attempted unauthorized lateral movement from the standard user profile into administrative directories. 
     *   Verified that the Windows File System (NTFS) successfully blocked access and triggered a UAC password prompt.
+    *   **Command-Line Verification (`whoami`):** Executed the `whoami` utility from the command prompt across both user contexts to validate privilege separation:
+        *   Running `whoami` under the **Standard User Account** confirmed normal low-privilege execution context.
+        *   Running `whoami` under the **Administrative Account** (`user32` / elevated context) verified active administrative token boundaries and prompted for UAC credentials when attempting elevated operations.
 *   **Phase 4: Security Insight & Analysis**
     *   Evaluated risk reduction metrics, confirming that isolating user privileges effectively breaks the persistence chain for common malware.
 *   **Phase 5: SOC Monitoring Perspective**
@@ -29,7 +32,7 @@ The lab was executed across five core phases to establish a zero-trust administr
 ## 📂 Repository Structure
 
 ```text
-├── images/                  # Forensic screenshots and UI captures
+├── images/                  # Forensic screenshots and UI captures (including whoami & UAC verification)
 ├── report/                  # Official PDF lab documentation
 └── README.md                # Project documentation and write-up
 
@@ -40,6 +43,6 @@ Lab Report: You can view or download the complete detailed report here.
 👤 Author
 Qazeem Samshudeen Temitope
 
-LinkedIn Profile: Qazeem samshudeen Temitope
+LinkedIn Profile: Qazeem Samshudeen Temitope https://www.linkedin.com/in/qazeem-samshudeen-94b314398/
 
-Email Contact: qazeemsamshudeen@gmali.com
+Email Contact: qazeemsamshudeen@gmail.com
